@@ -1,8 +1,11 @@
+[phases.setup]
+nixPkgs = []
+
 [phases.install]
-cmds = ["rm -f package-lock.json", "npm install"]
+cmds = ["npm install -g serve"]
 
 [phases.build]
-cmds = ["npm run build"]
+cmds = ["echo 'Using pre-built dist'"]
 
 [start]
-cmd = "npx serve dist -l 3000"
+cmd = "serve dist -l 3000 -s"
